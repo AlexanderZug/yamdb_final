@@ -20,7 +20,7 @@ jobs:
         pip install -r api_yamdb/requirements.txt
 
     - name: Check with flake8
-      run: flake8 . --exclude tests,api/migrations,api_yamdb/settings.py
+      run: flake8 --ignore F401,F403,F405,E501,W605 .
 
     - name: Test with pytest
       run: pytest
