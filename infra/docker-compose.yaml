@@ -9,7 +9,7 @@ services:
       - .env
 
   web:
-    image: alexzug89/yamdb:latest
+    image: alexzug89/ymdb:latest
     restart: always
     volumes:
       - static_value:/app/static/
