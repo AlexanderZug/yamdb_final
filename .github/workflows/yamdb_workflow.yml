@@ -63,7 +63,6 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
-          stack_file_name: infra/docker-compose.yaml
           script: |
             sudo docker-compose pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
             sudo docker-compose stop
@@ -89,7 +88,7 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: ${{ github.workflow }} успешно выполнен!
 
-
+#          stack_file_name: infra/docker-compose.yaml
 #          script: |
 #            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
 #            sudo docker stop $(sudo docker ps -a -q)
